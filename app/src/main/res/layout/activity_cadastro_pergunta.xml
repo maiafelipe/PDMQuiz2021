@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroPergunta">
+
+    <TextView
+        android:id="@+id/textoLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escreva a pergunta:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <EditText
+        android:id="@+id/textoEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoLabel"
+        />
+
+    <TextView
+        android:id="@+id/opt1Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1ª opção:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoEdit"
+        />
+    <EditText
+        android:id="@+id/opt1Edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opt1Label"
+        />
+    <TextView
+        android:id="@+id/opt2Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2ª opção:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opt1Edit"
+        />
+    <EditText
+        android:id="@+id/opt2Edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opt2Label"
+        />
+
+    <TextView
+        android:id="@+id/opt3Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3ª opção:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opt2Edit"
+        />
+    <EditText
+        android:id="@+id/opt3Edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opt3Label"
+        />
+
+    <TextView
+        android:id="@+id/opt4Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4ª opção:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opt3Edit"
+        />
+    <EditText
+        android:id="@+id/opt4Edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opt4Label"
+        />
+
+    <TextView
+        android:id="@+id/tempoLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tempo:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opt4Edit"
+        />
+    <EditText
+        android:id="@+id/tempoEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempoLabel"
+        />
+    <TextView
+        android:id="@+id/corretoLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resposta correta:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempoEdit"
+        />
+    <Spinner
+        android:id="@+id/corretoSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/corretoLabel"
+        />
+    <Button
+        android:id="@+id/enviarButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:onClick="processarPergunta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/corretoSpinner"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
