@@ -71,7 +71,8 @@ public class PerguntaDAO {
         return p;
     }
 
-    public List<Pergunta> getAllPerguntass() {
+    // Seleciona e retorna todas as perguntas do banco
+    public List<Pergunta> getAllPerguntas() {
         db = pdbh.getWritableDatabase();
         Cursor cursor = db.query(PerguntaDBHandler.TABLE_PERGUNTA,all,
                 null,null,null, null, null);
@@ -79,6 +80,8 @@ public class PerguntaDAO {
         List<Pergunta> perguntas = new ArrayList<Pergunta>();
         System.out.println("Query: " + cursor.getCount());
         if(cursor.getCount() > 0){
+            // Percorre todos os elementos encontrados e
+            // coloca todos na lista
             while(cursor.moveToNext()){
                 Pergunta p = new Pergunta();
                 p.setId(cursor.getLong(cursor.getColumnIndex(PerguntaDBHandler.COLUMN_ID)));
@@ -148,8 +151,8 @@ public class PerguntaDAO {
         return id;
     }
 
-    // Deleting Disciplina
-    public void removeDisciplina(Pergunta p) {
+    // Deleting Pergunta
+    public void removePergunta(Pergunta p) {
 
         db = pdbh.getWritableDatabase();
         db.delete(PerguntaDBHandler.TABLE_PERGUNTA,

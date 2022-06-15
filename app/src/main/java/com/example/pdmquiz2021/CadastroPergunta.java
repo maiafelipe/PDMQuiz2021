@@ -50,8 +50,6 @@ public class CadastroPergunta extends AppCompatActivity {
     }
 
     public void processarPergunta(View view){
-
-
         Pergunta p = new Pergunta();
 
         p.setTexto(textoEdit.getText().toString());
